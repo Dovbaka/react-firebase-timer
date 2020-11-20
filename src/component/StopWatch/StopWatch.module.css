@@ -1,0 +1,58 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper h3{
+    display: block;
+}
+
+.stopWatchesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.stopWatchBox {
+    background: #b7b7b7;
+    text-align: center;
+    padding: 20px 50px;
+    border-radius: 50px;
+    margin: 0 50px;
+}
+
+.stopWatchBox:hover {
+    background: #aeaeae;
+}
+
+.stopWatchBox:active {
+    background: #dedede;
+}
+
+.stopWatchBox img{
+    width: 217px;
+    height: 217px;
+}
+
+.logoutButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.logoutButton:hover {
+    color: #7171a4;
+}
+
+@media screen and (max-width: 992px) {
+    .stopWatchesContainer {
+        flex-direction: column;
+    }
+}

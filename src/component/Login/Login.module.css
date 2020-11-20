@@ -1,0 +1,40 @@
+.wrapper  {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox {
+    background: gray;
+    text-align: center;
+    padding: 20px 50px;
+    border-radius: 50px;
+}
+
+.loginBox input{
+    display: block;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #343434;
+    outline: none;
+    margin: 50px 50px;
+    max-width: 180px;
+    font-size: 18pt;
+    -moz-appearance:textfield;
+}
+
+.loginButton {
+    background-color: #4a4a4a;
+    border-radius:28px;
+    border:1px solid #292929;
+    display:inline-block;
+    cursor:pointer;
+    font-size:17px;
+    padding:11px 31px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #454545;
+}
+.loginButton:hover {
+    background-color: #757575;
+}

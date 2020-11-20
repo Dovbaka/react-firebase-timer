@@ -1,0 +1,21 @@
+[debug] [2020-11-20T10:26:49.021Z] ----------------------------------------------------------------------
+[debug] [2020-11-20T10:26:49.023Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\AzureSnake\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-11-20T10:26:49.023Z] CLI Version:   8.16.2
+[debug] [2020-11-20T10:26:49.023Z] Platform:      win32
+[debug] [2020-11-20T10:26:49.023Z] Node Version:  v14.5.0
+[debug] [2020-11-20T10:26:49.024Z] Time:          Fri Nov 20 2020 12:26:49 GMT+0200 (Восточная Европа, стандартное время)
+[debug] [2020-11-20T10:26:49.024Z] ----------------------------------------------------------------------
+[debug] [2020-11-20T10:26:49.024Z] 
+[debug] [2020-11-20T10:26:49.029Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-20T10:26:49.030Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\AzureSnake\WebstormProjects\react-timer-demo
+
