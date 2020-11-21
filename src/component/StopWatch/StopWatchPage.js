@@ -3,6 +3,7 @@ import StopWatch from "./StopWatch";
 import {useAuth} from "../../providers/AuthContext";
 import {useHistory} from "react-router";
 import styles from "./StopWatch.module.css"
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 const StopWatchPage = () => {
 
@@ -26,10 +27,10 @@ const StopWatchPage = () => {
             Log Out
         </button>
         <div className={styles.stopWatchesContainer}>
-            <StopWatch name={"Desktop"} userKey={currentUser? currentUser.uid + "Desktop": "unknown"}/>
-            <StopWatch name={"Mobile"} userKey={currentUser? currentUser.uid + "Mobile": "unknown"}/>
+            <StopWatch name={"Desktop"} userKey={currentUser? currentUser.uid + "Desktop": "unknownIdDesktop"}/>
+            <StopWatch name={"Mobile"} userKey={currentUser? currentUser.uid + "Mobile": "unknownIdMobile"}/>
         </div>
     </div>
 }
 
-export default StopWatchPage;
+export default withAuthRedirect(StopWatchPage);
