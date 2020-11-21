@@ -5,7 +5,7 @@ import {useHistory} from "react-router";
 import styles from "./StopWatch.module.css"
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
-const StopWatchPage = () => {
+const StopWatchContainer = () => {
 
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
@@ -33,4 +33,4 @@ const StopWatchPage = () => {
     </div>
 }
 
-export default withAuthRedirect(StopWatchPage);
+export default withAuthRedirect(StopWatchContainer);

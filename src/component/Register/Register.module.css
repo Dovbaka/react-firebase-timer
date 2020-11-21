@@ -6,10 +6,20 @@
 }
 
 .registerBox {
-    background: gray;
+    background: #b7b7b7;
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px 50px;
     border-radius: 50px;
+}
+
+.registerBox p{
+    color: #707070;
+    text-decoration: underline;
+}
+
+.registerBox .navLink{
+    text-decoration: underline;
+    color: #2d2d2d;
 }
 
 .registerBox input{
@@ -18,24 +28,49 @@
     border: none;
     border-bottom: 1px solid #343434;
     outline: none;
-    margin: 50px 50px;
-    max-width: 180px;
-    font-size: 18pt;
+    margin: 40px 20px;
+    max-width: 255px;
+    font-size: 14pt;
     -moz-appearance:textfield;
 }
 
 .registerButton {
-    background-color: #4a4a4a;
+    background-color: #7c7c7c;
     border-radius:28px;
-    border:1px solid #292929;
+    border:1px solid #4a4a4a;
     display:inline-block;
     cursor:pointer;
     font-size:17px;
-    padding:11px 31px;
+    padding:8px 25px;
     text-decoration:none;
     text-shadow:0 1px 0 #454545;
     margin-bottom: 25px;
 }
+
 .registerButton:hover {
-    background-color: #757575;
+    background-color: #515151;
 }
+
+@media screen and (max-width: 767px) {
+    .registerBox {
+        padding: 20px 5px;
+    }
+
+    .registerBox p{
+        margin-bottom: 40px;
+    }
+
+    .registerBox input{
+        font-size: 12pt;
+        margin: 40px 35px;
+    }
+
+    .registerButton {
+        margin-bottom: 10px;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #b7b7b7 inset !important;
+}
+
