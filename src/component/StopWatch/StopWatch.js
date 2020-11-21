@@ -5,28 +5,28 @@ import {useAuth} from "../../providers/AuthContext";
 
 const StopWatch = (props) => {
 
-    const [width, setWidth] = useState(window.innerWidth);
-    function handleWindowSizeChange() {
-        setWidth(window.innerWidth);
-    }
-
-    const [timer, setTimer] = useState(0)
     const {getData, setData} = useAuth()
-    const [isActive, setIsActive] = useState(false)
-    const [isPaused, setIsPaused] = useState(false)
+    const [width, setWidth] = useState(window.innerWidth); // For Screen size detection
+    const [timer, setTimer] = useState(0) // For timer value
+    const [isActive, setIsActive] = useState(false) //For count active status
+    const [isPaused, setIsPaused] = useState(false) //For pause status
     const countRef = useRef(null)
 
     useEffect(()=>{
         getData(props.userKey).on('value', e => {
-            setTimer(e.val());
+            setTimer(e.val()); // Get stored time
         })
-        if(width >= 768 && props.name === "Desktop") handleStart();
+        if(width >= 768 && props.name === "Desktop") handleStart(); //Check window size
         if(width <= 768 && props.name === "Mobile") handleStart();
     },[]);
 
+    useEffect(()=>{
+        if(timer > 0) setData(props.userKey, timer);// Send to Realtime DB
+    },[timer]);
+
     const handleStart = () => {
-        setIsActive(true)
-        setIsPaused(true)
+        setIsActive(true);
+        setIsPaused(true);
         countRef.current = setInterval(() => {
             setTimer((timer) => timer + 1)
         }, 1000)
@@ -35,7 +35,6 @@ const StopWatch = (props) => {
     const handlePause = () => {
         clearInterval(countRef.current)
         setIsPaused(false);
-        setData(props.userKey, timer);
     }
 
     const handleResume = () => {
@@ -55,13 +54,12 @@ const StopWatch = (props) => {
     }
 
 
-
     return <div className={styles.wrapper}>
         <h3>{props.name}</h3>
         <div className={styles.stopWatchBox}>
             <img
                 src={watchIcon}
-                alt={"img"} onClick={!isActive && !isPaused ? handleStart : isPaused ? handlePause : handleResume}/>
+                alt={"img"} onClick={isPaused ? handlePause : handleResume}/>
         </div>
         <h3>{formatTime()}</h3>
     </div>

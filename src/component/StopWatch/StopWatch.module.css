@@ -55,4 +55,28 @@
     .stopWatchesContainer {
         flex-direction: column;
     }
+
+    .stopWatchBox {
+        background: #b7b7b7;
+        text-align: center;
+        padding: 30px 30px;
+        border-radius: 30px;
+        margin: 0;
+    }
+
+    .stopWatchBox img{
+        width: 90px;
+        height: 90px;
+    }
+
+    .wrapper {
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    .wrapper h3{
+        font-size: 12pt;
+    }
+
 }
+

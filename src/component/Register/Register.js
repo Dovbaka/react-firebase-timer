@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react'
 import styles from "./Register.module.css";
 import {useAuth} from "../../providers/AuthContext"
-import { Link, useHistory } from "react-router-dom"
+import {Link, NavLink, useHistory} from "react-router-dom"
 
 const Register = () => {
 
@@ -31,14 +31,14 @@ const Register = () => {
         <div className={styles.registerBox}>
             {error}
             <form onSubmit={handleSubmit}>
-                <h1>Login</h1>
+                <h1>Register</h1>
                 <input placeholder={"Name"} name={"firstName"} type={"text"} ref={nameRef}/>
                 <input placeholder={"Surname"} name={"lastName"} type={"text"} ref={surnameRef}/>
                 <input placeholder={"Email"} name={"userEmail"} type={"email"} ref={emailRef} required/>
                 <input placeholder={"Password"} name={"userPassword"} type={"password"} ref={passwordRef} />
                 <button className={styles.registerButton} type="submit" disabled={loading}>Register</button>
             </form>
-
+            <p>Already registered? <NavLink className={styles.navLink} to={"/"}>Log in</NavLink></p>
         </div>
     </div>
 }

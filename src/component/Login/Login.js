@@ -36,7 +36,7 @@ const Login = () => {
                 <input placeholder={"Password"} name={"userPassword"} type={"password"} ref={passwordRef}/>
                 <button className={styles.loginButton} type="submit" disabled={loading}>Login</button>
             </form>
-            <p>Don't have an account yet? <NavLink to={"/register"}>Register</NavLink></p>
+            <p>Don't have an account yet? <NavLink className={styles.navLink} to={"/register"}>Register</NavLink></p>
         </div>
     </div>
 }

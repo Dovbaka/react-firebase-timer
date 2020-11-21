@@ -3,8 +3,8 @@ import Login from "./component/Login/Login";
 import Register from "./component/Register/Register";
 import {Route, Switch} from "react-router";
 import {BrowserRouter} from "react-router-dom";
-import StopWatchPage from "./component/StopWatch/StopWatchPage";
-import { AuthProvider } from "../src/providers/AuthContext"
+import StopWatchPage from "./component/StopWatch/StopWatchContainer";
+import { AuthProvider } from "./providers/AuthContext"
 
 function App() {
   return (
