@@ -1,0 +1,64 @@
+.navbarContainer {
+    height: 80px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 2px 20px rgba(142, 148, 160, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.getStartedButton {
+    min-width: 180px;
+    min-height: 35px;
+    background: #3F91FF;
+    border-radius: 35px;
+    border: 1px solid #FFFFFF;
+    color: white;
+    display:inline-block;
+    cursor:pointer;
+    font-size:17px;
+    padding:8px 25px;
+    text-decoration:none;
+    outline: none;
+    margin-left: 50px;
+}
+
+
+.getStartedButton:hover {
+    background-color: #2485ff;
+}
+
+.logoutButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: gray;
+    margin-right: 50px;
+}
+
+.logoutButton:hover {
+    color: #7171a4;
+}
+
+.goBackButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #222222;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .logoutButton {
+        margin-right: 20px;
+    }
+
+    .getStartedButton {
+        margin-left: 20px;
+    }
+}
+

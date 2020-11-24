@@ -20,7 +20,7 @@ const Register = () => {
             setError("")
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
-            history.push("stopwatch")
+            history.push("chart")
         } catch {
             setError("Failed to create an account")
         }
