@@ -1,5 +1,6 @@
-import React, { useContext, useState, useEffect } from "react"
-import app, { auth } from "../firebase"
+import React, {useContext, useState, useEffect} from "react"
+import app, {auth} from "../firebase"
+import firebase from "firebase";
 
 
 const AuthContext = React.createContext();
@@ -9,7 +10,10 @@ export function useAuth() {
     return useContext(AuthContext);
 }
 
-export function AuthProvider({ children }) {
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+const faceBookProvider = new firebase.auth.FacebookAuthProvider();
+
+export function AuthProvider({children}) {
     const [currentUser, setCurrentUser] = useState();
     const [loading, setLoading] = useState(true);
 
@@ -19,6 +23,14 @@ export function AuthProvider({ children }) {
 
     function login(email, password) {
         return auth.signInWithEmailAndPassword(email, password);
+    }
+
+    function signInWithGoogle() {
+        return auth.signInWithPopup(googleProvider)
+    }
+
+    function signInWithFacebook() {
+        return auth.signInWithPopup(faceBookProvider)
     }
 
     function logout() {
@@ -48,6 +60,8 @@ export function AuthProvider({ children }) {
         login,
         signup,
         logout,
+        signInWithGoogle,
+        signInWithFacebook,
         getData,
         setData
     }

@@ -6,7 +6,9 @@
 }
 
 .registerBox {
-    background: #b7b7b7;
+    background: #E9ECF3;
+    border: 9px solid #FFFFFF;
+    box-sizing: border-box;
     text-align: center;
     padding: 20px 50px;
     border-radius: 50px;
@@ -35,9 +37,10 @@
 }
 
 .registerButton {
-    background-color: #7c7c7c;
-    border-radius:28px;
-    border:1px solid #4a4a4a;
+    background: #3F91FF;
+    border-radius: 35px;
+    border: 1px solid #FFFFFF;
+    color: white;
     display:inline-block;
     cursor:pointer;
     font-size:17px;
@@ -48,7 +51,7 @@
 }
 
 .registerButton:hover {
-    background-color: #515151;
+    background-color: #2485ff;
 }
 
 @media screen and (max-width: 767px) {

@@ -1,0 +1,9 @@
+.content {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/images/screenshot006-01 1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
